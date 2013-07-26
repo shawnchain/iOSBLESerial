@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29943E6317A1848500314CA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29943E6217A1848500314CA0 /* UIKit.framework */; };
+		29943E6517A1848500314CA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29943E6417A1848500314CA0 /* Foundation.framework */; };
+		29943E6717A1848500314CA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29943E6617A1848500314CA0 /* CoreGraphics.framework */; };
+		29943E6D17A1848500314CA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29943E6B17A1848500314CA0 /* InfoPlist.strings */; };
+		29943E6F17A1848500314CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29943E6E17A1848500314CA0 /* main.m */; };
+		29943E7317A1848500314CA0 /* BLEDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29943E7217A1848500314CA0 /* BLEDemoAppDelegate.m */; };
+		29943E7517A1848500314CA0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29943E7417A1848500314CA0 /* Default.png */; };
+		29943E7717A1848500314CA0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29943E7617A1848500314CA0 /* Default@2x.png */; };
+		29943E7917A1848500314CA0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29943E7817A1848500314CA0 /* Default-568h@2x.png */; };
+		29943E7C17A1848500314CA0 /* BLEDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29943E7B17A1848500314CA0 /* BLEDemoViewController.m */; };
+		29943E7F17A1848500314CA0 /* BLEDemoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29943E7D17A1848500314CA0 /* BLEDemoViewController_iPhone.xib */; };
+		29943E8217A1848500314CA0 /* BLEDemoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29943E8017A1848500314CA0 /* BLEDemoViewController_iPad.xib */; };
+		29943E8B17A184BC00314CA0 /* BLESerialService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29943E8A17A184BC00314CA0 /* BLESerialService.m */; };
+		29943E8D17A184DD00314CA0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29943E8C17A184DD00314CA0 /* CoreBluetooth.framework */; };
+		29943E9117A1867600314CA0 /* BLEDemoSendReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29943E8F17A1867600314CA0 /* BLEDemoSendReceiveViewController.m */; };
+		29943E9217A1867600314CA0 /* BLEDemoSendReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29943E9017A1867600314CA0 /* BLEDemoSendReceiveViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29943E5F17A1848500314CA0 /* BLESerialDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESerialDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29943E6217A1848500314CA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29943E6417A1848500314CA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29943E6617A1848500314CA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29943E6A17A1848500314CA0 /* BLESerialDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLESerialDemo-Info.plist"; sourceTree = "<group>"; };
+		29943E6C17A1848500314CA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29943E6E17A1848500314CA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29943E7017A1848500314CA0 /* BLESerialDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLESerialDemo-Prefix.pch"; sourceTree = "<group>"; };
+		29943E7117A1848500314CA0 /* BLEDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDemoAppDelegate.h; sourceTree = "<group>"; };
+		29943E7217A1848500314CA0 /* BLEDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDemoAppDelegate.m; sourceTree = "<group>"; };
+		29943E7417A1848500314CA0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		29943E7617A1848500314CA0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		29943E7817A1848500314CA0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		29943E7A17A1848500314CA0 /* BLEDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDemoViewController.h; sourceTree = "<group>"; };
+		29943E7B17A1848500314CA0 /* BLEDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDemoViewController.m; sourceTree = "<group>"; };
+		29943E7E17A1848500314CA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEDemoViewController_iPhone.xib; sourceTree = "<group>"; };
+		29943E8117A1848500314CA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEDemoViewController_iPad.xib; sourceTree = "<group>"; };
+		29943E8917A184BC00314CA0 /* BLESerialService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLESerialService.h; path = ../BLESerialService.h; sourceTree = "<group>"; };
+		29943E8A17A184BC00314CA0 /* BLESerialService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLESerialService.m; path = ../BLESerialService.m; sourceTree = "<group>"; };
+		29943E8C17A184DD00314CA0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		29943E8E17A1867600314CA0 /* BLEDemoSendReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDemoSendReceiveViewController.h; sourceTree = "<group>"; };
+		29943E8F17A1867600314CA0 /* BLEDemoSendReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDemoSendReceiveViewController.m; sourceTree = "<group>"; };
+		29943E9017A1867600314CA0 /* BLEDemoSendReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLEDemoSendReceiveViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29943E5C17A1848500314CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29943E8D17A184DD00314CA0 /* CoreBluetooth.framework in Frameworks */,
+				29943E6317A1848500314CA0 /* UIKit.framework in Frameworks */,
+				29943E6517A1848500314CA0 /* Foundation.framework in Frameworks */,
+				29943E6717A1848500314CA0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29943E5617A1848500314CA0 = {
+			isa = PBXGroup;
+			children = (
+				29943E8817A184AE00314CA0 /* BLESerialService */,
+				29943E6817A1848500314CA0 /* BLESerialDemo */,
+				29943E6117A1848500314CA0 /* Frameworks */,
+				29943E6017A1848500314CA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29943E6017A1848500314CA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29943E5F17A1848500314CA0 /* BLESerialDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29943E6117A1848500314CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29943E8C17A184DD00314CA0 /* CoreBluetooth.framework */,
+				29943E6217A1848500314CA0 /* UIKit.framework */,
+				29943E6417A1848500314CA0 /* Foundation.framework */,
+				29943E6617A1848500314CA0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29943E6817A1848500314CA0 /* BLESerialDemo */ = {
+			isa = PBXGroup;
+			children = (
+				29943E7117A1848500314CA0 /* BLEDemoAppDelegate.h */,
+				29943E7217A1848500314CA0 /* BLEDemoAppDelegate.m */,
+				29943E7A17A1848500314CA0 /* BLEDemoViewController.h */,
+				29943E7B17A1848500314CA0 /* BLEDemoViewController.m */,
+				29943E7D17A1848500314CA0 /* BLEDemoViewController_iPhone.xib */,
+				29943E8017A1848500314CA0 /* BLEDemoViewController_iPad.xib */,
+				29943E6917A1848500314CA0 /* Supporting Files */,
+				29943E8E17A1867600314CA0 /* BLEDemoSendReceiveViewController.h */,
+				29943E8F17A1867600314CA0 /* BLEDemoSendReceiveViewController.m */,
+				29943E9017A1867600314CA0 /* BLEDemoSendReceiveViewController.xib */,
+			);
+			path = BLESerialDemo;
+			sourceTree = "<group>";
+		};
+		29943E6917A1848500314CA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29943E6A17A1848500314CA0 /* BLESerialDemo-Info.plist */,
+				29943E6B17A1848500314CA0 /* InfoPlist.strings */,
+				29943E6E17A1848500314CA0 /* main.m */,
+				29943E7017A1848500314CA0 /* BLESerialDemo-Prefix.pch */,
+				29943E7417A1848500314CA0 /* Default.png */,
+				29943E7617A1848500314CA0 /* Default@2x.png */,
+				29943E7817A1848500314CA0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29943E8817A184AE00314CA0 /* BLESerialService */ = {
+			isa = PBXGroup;
+			children = (
+				29943E8917A184BC00314CA0 /* BLESerialService.h */,
+				29943E8A17A184BC00314CA0 /* BLESerialService.m */,
+			);
+			name = BLESerialService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29943E5E17A1848500314CA0 /* BLESerialDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29943E8517A1848500314CA0 /* Build configuration list for PBXNativeTarget "BLESerialDemo" */;
+			buildPhases = (
+				29943E5B17A1848500314CA0 /* Sources */,
+				29943E5C17A1848500314CA0 /* Frameworks */,
+				29943E5D17A1848500314CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLESerialDemo;
+			productName = BLESerialDemo;
+			productReference = 29943E5F17A1848500314CA0 /* BLESerialDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29943E5717A1848500314CA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BLEDemo;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = JoyLabs;
+			};
+			buildConfigurationList = 29943E5A17A1848500314CA0 /* Build configuration list for PBXProject "BLESerialDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29943E5617A1848500314CA0;
+			productRefGroup = 29943E6017A1848500314CA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29943E5E17A1848500314CA0 /* BLESerialDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29943E5D17A1848500314CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29943E6D17A1848500314CA0 /* InfoPlist.strings in Resources */,
+				29943E7517A1848500314CA0 /* Default.png in Resources */,
+				29943E7717A1848500314CA0 /* Default@2x.png in Resources */,
+				29943E7917A1848500314CA0 /* Default-568h@2x.png in Resources */,
+				29943E7F17A1848500314CA0 /* BLEDemoViewController_iPhone.xib in Resources */,
+				29943E8217A1848500314CA0 /* BLEDemoViewController_iPad.xib in Resources */,
+				29943E9217A1867600314CA0 /* BLEDemoSendReceiveViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29943E5B17A1848500314CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29943E6F17A1848500314CA0 /* main.m in Sources */,
+				29943E7317A1848500314CA0 /* BLEDemoAppDelegate.m in Sources */,
+				29943E7C17A1848500314CA0 /* BLEDemoViewController.m in Sources */,
+				29943E8B17A184BC00314CA0 /* BLESerialService.m in Sources */,
+				29943E9117A1867600314CA0 /* BLEDemoSendReceiveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29943E6B17A1848500314CA0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29943E6C17A1848500314CA0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29943E7D17A1848500314CA0 /* BLEDemoViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29943E7E17A1848500314CA0 /* en */,
+			);
+			name = BLEDemoViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		29943E8017A1848500314CA0 /* BLEDemoViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29943E8117A1848500314CA0 /* en */,
+			);
+			name = BLEDemoViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29943E8317A1848500314CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29943E8417A1848500314CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29943E8617A1848500314CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialDemo/BLESerialDemo-Prefix.pch";
+				INFOPLIST_FILE = "BLESerialDemo/BLESerialDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		29943E8717A1848500314CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialDemo/BLESerialDemo-Prefix.pch";
+				INFOPLIST_FILE = "BLESerialDemo/BLESerialDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29943E5A17A1848500314CA0 /* Build configuration list for PBXProject "BLESerialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29943E8317A1848500314CA0 /* Debug */,
+				29943E8417A1848500314CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29943E8517A1848500314CA0 /* Build configuration list for PBXNativeTarget "BLESerialDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29943E8617A1848500314CA0 /* Debug */,
+				29943E8717A1848500314CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29943E5717A1848500314CA0 /* Project object */;
+}
