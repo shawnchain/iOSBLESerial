@@ -40,7 +40,20 @@
             BLEDemoSendReceiveViewController *vc = [[[BLEDemoSendReceiveViewController alloc] initWithSerialService:_serialService] autorelease];
             [self.navigationController pushViewController:vc animated:YES];
         }else{
-            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Connect failed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+            
+            NSString *title,*message;
+            if(error.code == kBLESerialServiceErrorCodePoweredOff){
+                title = @"Bluetooth Power";
+                message = @"You must turn on Bluetooth in Settings in order to use LE";
+            }else if(error.code == kBLESerialServiceErrorCodeTimeout){
+                title = @"Connect timeout";
+                message = @"Please make sure your BLE device works properly";
+            }else{
+                title = @"Error";
+                message = [NSString stringWithFormat:@"Connect failed with error code: %d",error.code];
+            }
+            
+            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
             [alert show];
         }
     }];

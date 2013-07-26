@@ -52,7 +52,8 @@ typedef enum {
 #define DEFAULT_NOTIFY_CHARACTERISTIC_UUID @"FFC2"
 
 NSString *kBLESerialServiceErrorDomain = @"BLESerialServiceError";
-const int kBLESerialServiceErrorCodeScanTimeout = 1;
+
+const int kBLESerialServiceErrorCodeTimeout = 1;
 const int kBLESerialServiceErrorCodeUserCancled = 2;
 const int kBLESerialServiceErrorCodeNotFound = 3;
 const int kBLESerialServiceErrorCodePoweredOff = 4;
@@ -166,7 +167,7 @@ const int kBLESerialServiceErrorCodePoweredOff = 4;
 -(void) connectTimerRoutin:(NSTimer *)timer{
     NSError *cause = nil;
     if(_state != CONNECTED){
-        cause = [NSError errorWithDomain:kBLESerialServiceErrorDomain code:kBLESerialServiceErrorCodeScanTimeout userInfo:nil];
+        cause = [NSError errorWithDomain:kBLESerialServiceErrorDomain code:kBLESerialServiceErrorCodeTimeout userInfo:nil];
     }
     NSLog(@"connect time out");
     [self doDisconnect:cause];
@@ -214,15 +215,6 @@ const int kBLESerialServiceErrorCodePoweredOff = 4;
     self.disconnectCompleteBlock = nil;
 }
 
-- (void) discoveryStatePoweredOff
-{
-    NSString *title     = @"Bluetooth Power";
-    NSString *message   = @"You must turn on Bluetooth in Settings in order to use LE";
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
-    [alertView release];
-}
-
 -(void) reset{
     self.cbNotifyCharacteristic = nil;
     self.cbReadWriteCharacteristic = nil;
@@ -237,66 +229,44 @@ const int kBLESerialServiceErrorCodePoweredOff = 4;
 // BT State Handler
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
-    static CBCentralManagerState previousState = -1;
-    
 	switch (_cbCentralManager.state) {
 		case CBCentralManagerStatePoweredOff:
 		{
             // BT is not powered on
-            // connecting... so just disconnect
             if(_connectTimer.isValid){
                 [_connectTimer invalidate];
             }
             NSError *error = [NSError errorWithDomain:kBLESerialServiceErrorDomain code:kBLESerialServiceErrorCodePoweredOff userInfo:nil];
             [self doDisconnect:error];
             
-			// Tell user to power ON BT for functionality, but not on first run - the Framework will alert in that instance.
-            if (previousState != -1) {
-                [self discoveryStatePoweredOff];
-            }
 			break;
 		}
             
 		case CBCentralManagerStateUnauthorized:
 		{
-			/* Tell user the app is not allowed. */
+			// Use denied the bt access for your app
 			break;
 		}
             
         case CBCentralManagerStateUnsupported:
 		case CBCentralManagerStateUnknown:
 		{
-			/* Bad news, let's wait for another event. */
+            // unknow/unsupported states
 			break;
 		}
             
 		case CBCentralManagerStatePoweredOn:
 		{
-            //TODO - start discovery
-            /*
-			pendingInit = NO;
-			[self loadSavedDevices];
-			[centralManager retrieveConnectedPeripherals];
-			[discoveryDelegate discoveryDidRefresh];
-             */
+            //TODO - should start connect? 
             NSLog(@"Bluetooth is powered on");
 			break;
 		}
             
 		case CBCentralManagerStateResetting:
 		{
-            /*
-			[self clearDevices];
-            [discoveryDelegate discoveryDidRefresh];
-            [peripheralDelegate alarmServiceDidReset];
-            
-			pendingInit = YES;
-             */
 			break;
 		}
 	}
-    
-    previousState = _cbCentralManager.state;
 }
 
 // Peripherals found
